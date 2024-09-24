@@ -1,0 +1,5 @@
+string topic_name
+float64 soglia
+---
+bool contact
+string message 		# informational, e.g. for error messages

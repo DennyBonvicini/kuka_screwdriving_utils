@@ -1,0 +1,4 @@
+string script_path
+---
+bool detected
+string message
