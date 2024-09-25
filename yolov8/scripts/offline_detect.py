@@ -19,12 +19,12 @@ from tf2_ros import TransformBroadcaster
 
 from scipy.spatial.transform import Rotation as Rot
 
-MODEL_DATA_PATH = "/home/denny/projects/battery_cell_ws/src/yolov8/best_2marker_model.pt" 
-IMAGE_PATH = "/home/denny/projects/battery_cell_ws/src/yolov8/image_1.jpeg" #acquisizione1.jpeg
-DEPTH_FROM_CSV='/home/denny/projects/battery_cell_ws/src/yolov8/depth1.csv'
+MODEL_DATA_PATH = "/home/denny/projects/battery_cell_ws/src/kuka_screwdriving_utils/yolov8/best_2marker_model.pt" 
+IMAGE_PATH = "/home/denny/projects/battery_cell_ws/src/kuka_screwdriving_utils/yolov8/image_1.jpeg" #acquisizione1.jpeg
+DEPTH_FROM_CSV='/home/denny/projects/battery_cell_ws/src/kuka_screwdriving_utils/yolov8/depth1.csv'
 
-DEPTH_FILE_NAME='/home/denny/projects/battery_cell_ws/src/yolov8/depth111.csv'
-IMAGE_SAVE_NAME='/home/denny/projects/battery_cell_ws/src/yolov8/image_111.jpeg'
+DEPTH_FILE_NAME='/home/denny/projects/battery_cell_ws/src/kuka_screwdriving_utils/yolov8/depth111.csv'
+IMAGE_SAVE_NAME='/home/denny/projects/battery_cell_ws/src/kuka_screwdriving_utils/yolov8/image_111.jpeg'
 
 # To see Results class: https://docs.ultralytics.com/modes/predict/#working-with-results
 class imageDetection(Node):
@@ -378,7 +378,7 @@ def main(args=None):
         #v0 = np.array([0.030, 0.580, 0.2, 1.0]) # z=50 mm, così afferro il cilindro a metà
 
         # coordinate viti
-        v1 = np.array([0.106, 0.596, 0.04, 1.0]) # rialzate di 0.04 mm per rappresentare posizione TF 'reale' su rviz
+        v1 = np.array([0.106, 0.596, 0.6, 1.0]) # rialzate di 0.04 mm per rappresentare posizione TF 'reale' su rviz
         v2 = np.array([0.155, 0.597, 0.04, 1.0]) # rialzate di 0.04 mm per rappresentare posizione TF 'reale' su rviz
         v3 = np.array([0.206, 0.598, 0.04, 1.0]) # 
         

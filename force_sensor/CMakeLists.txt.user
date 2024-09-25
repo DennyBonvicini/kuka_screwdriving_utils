@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 6.0.2, 2024-09-06T15:28:15. -->
+<!-- Written by QtCreator 6.0.2, 2024-09-25T17:44:32. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -104,7 +104,7 @@
 -DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}
 -DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
 -DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
-    <value type="QString" key="CMake.Source.Directory">/home/denny/projects/battery_cell_ws/src/force_sensor</value>
+    <value type="QString" key="CMake.Source.Directory">/home/denny/projects/battery_cell_ws/src/kuka_screwdriving_utils/force_sensor</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/denny/projects/battery_cell_ws/build/force_sensor</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">

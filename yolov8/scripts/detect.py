@@ -17,12 +17,12 @@ from tf2_ros import TransformBroadcaster
 
 from scipy.spatial.transform import Rotation as Rot
 
-MODEL_DATA_PATH = "/home/denny/projects/battery_cell_ws/src/yolov8/best_2marker_model.pt" 
-IMAGE_PATH = "/home/denny/projects/battery_cell_ws/src/yolov8/image_1.jpeg" #acquisizione1.jpeg
-DEPTH_FROM_CSV='/home/denny/projects/battery_cell_ws/src/yolov8/depth1.csv'
+MODEL_DATA_PATH = "/home/denny/projects/battery_cell_ws/src/kuka_screwdriving_utils/yolov8/best_2marker_model.pt" 
+IMAGE_PATH = "/home/denny/projects/battery_cell_ws/src/kuka_screwdriving_utils/yolov8/image_1.jpeg" #acquisizione1.jpeg
+DEPTH_FROM_CSV='/home/denny/projects/battery_cell_ws/src/kuka_screwdriving_utils/yolov8/depth1.csv'
 
-DEPTH_FILE_NAME='/home/denny/projects/battery_cell_ws/src/yolov8/depth111.csv'
-IMAGE_SAVE_NAME='/home/denny/projects/battery_cell_ws/src/yolov8/image_111.jpeg'
+DEPTH_FILE_NAME='/home/denny/projects/battery_cell_ws/src/kuka_screwdriving_utils/yolov8/depth111.csv'
+IMAGE_SAVE_NAME='/home/denny/projects/battery_cell_ws/src/kuka_screwdriving_utils/yolov8/image_111.jpeg'
 
 # To see Results class: https://docs.ultralytics.com/modes/predict/#working-with-results
 class imageDetection(Node):

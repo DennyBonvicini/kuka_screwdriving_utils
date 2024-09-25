@@ -10,7 +10,7 @@ class FtAtiPublisher(Node):
         self.publisher_ = self.create_publisher(InterfaceValue, '/ft_ati_controller/inputs', 1)
         timer_period = 1  # Pubblica ogni tot secondi
         self.counter = 0 #contatore per gestire il cambio valore
-        self.current_value = -10.0
+        self.current_value = 100.0 #-10.0
         self.timer = self.create_timer(timer_period, self.timer_callback)
         
 
@@ -34,14 +34,14 @@ class FtAtiPublisher(Node):
             'analog_inputs/torque_z'
         ]
 
-        #cambio valore ogni 5 secondi
-        if self.counter < 10:
-             self.current_value = -10.0 
+        #cambio valore ogni n secondi
+        if self.counter < 3:
+             self.current_value = 100.0 #-10.0 
         else :
-             self.current_value = 100.0
+             self.current_value = -10.0 #100.0
 
         self.counter +=1
-        if self.counter == 20 :
+        if self.counter == 6 :
              self.counter = 0
 
         # assegno valore a tutte le interfacce
