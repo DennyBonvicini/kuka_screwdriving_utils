@@ -36,7 +36,7 @@ public:
                     );
 
         // Creazione del client dell'azione
-        action_client_ = rclcpp_action::create_client<FollowJointTrajectory>(this, "/kuka_scaled_fjt_controller/follow_joint_trajectory");
+        action_client_ = rclcpp_action::create_client<FollowJointTrajectory>(this, "/kuka_jt_controller/follow_joint_trajectory");
 
     }
 

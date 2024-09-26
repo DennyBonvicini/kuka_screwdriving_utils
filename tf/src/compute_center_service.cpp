@@ -34,7 +34,7 @@ public:
         // Costruisci e pubblica la TF
         geometry_msgs::msg::TransformStamped center_transform;
         center_transform.header.stamp = this->now();
-        center_transform.header.frame_id = "screw_approach_frame";
+        center_transform.header.frame_id = "screw_frame";
         center_transform.child_frame_id = "centered_screw_frame";
         center_transform.transform.translation.x = x_center_;
         center_transform.transform.translation.y = y_center_;
@@ -70,14 +70,14 @@ private:
         }
 
         // Calcola il centro
-         x_center_ = (std::abs(deltas_[0] - deltas_[1]))/2 ;
-         y_center_ = (std::abs(deltas_[2] - deltas_[3]))/2 ;
+         x_center_ = (std::abs(deltas_[0] - deltas_[1]))*0.5 ;   // (+X) - (-X)
+         y_center_ = (std::abs(deltas_[2] - deltas_[3]))*0.5 ;   // (-Y) - (+Y)
 
-        if(deltas_[0] < deltas_[1]){
+        if(deltas_[0] < deltas_[1]){ // (+X) - (-X)
             x_center_ = - x_center_;
         }
 
-        if(deltas_[2] < deltas_[3]){
+        if(deltas_[2] > deltas_[3]){ // (-Y) - (+Y)
             y_center_ = - y_center_;
         }
 
