@@ -38,13 +38,41 @@ public:
         center_transform.child_frame_id = "centered_screw_frame";
         center_transform.transform.translation.x = x_center_;
         center_transform.transform.translation.y = y_center_;
-        center_transform.transform.translation.z = 0.0; // Modifica come necessario
+        center_transform.transform.translation.z = 0.002; // Modifica come necessario
         center_transform.transform.rotation.x = 0.0;
         center_transform.transform.rotation.y = 0.0;
         center_transform.transform.rotation.z = 0.0;
         center_transform.transform.rotation.w = 1.0;
 
         tf_broadcaster_->sendTransform(center_transform);
+
+        geometry_msgs::msg::TransformStamped screwdriver_low;
+        screwdriver_low.header.stamp = this->now();
+        screwdriver_low.header.frame_id = "centered_screw_frame";
+        screwdriver_low.child_frame_id = "screwdriver_low_frame";
+        screwdriver_low.transform.translation.x = 0.0;
+        screwdriver_low.transform.translation.y = 0.0;
+        screwdriver_low.transform.translation.z = 0.002; 
+        screwdriver_low.transform.rotation.x = 0.0;
+        screwdriver_low.transform.rotation.y = 0.0;
+        screwdriver_low.transform.rotation.z = 0.0;
+        screwdriver_low.transform.rotation.w = 1.0;
+
+        tf_broadcaster_->sendTransform(screwdriver_low);
+
+        geometry_msgs::msg::TransformStamped screwdriver_fast;
+        screwdriver_fast.header.stamp = this->now();
+        screwdriver_fast.header.frame_id = "screwdriver_low_frame";
+        screwdriver_fast.child_frame_id = "screwdriver_fast_frame";
+        screwdriver_fast.transform.translation.x = 0.0;
+        screwdriver_fast.transform.translation.y = 0.0;
+        screwdriver_fast.transform.translation.z = 0.002; 
+        screwdriver_fast.transform.rotation.x = 0.0;
+        screwdriver_fast.transform.rotation.y = 0.0;
+        screwdriver_fast.transform.rotation.z = 0.0;
+        screwdriver_fast.transform.rotation.w = 1.0;
+
+        tf_broadcaster_->sendTransform(screwdriver_fast);
         }
 
     }

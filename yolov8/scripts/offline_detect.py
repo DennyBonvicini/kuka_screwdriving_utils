@@ -378,7 +378,7 @@ def main(args=None):
         #v0 = np.array([0.030, 0.580, 0.2, 1.0]) # z=50 mm, così afferro il cilindro a metà
 
         # coordinate viti
-        v1 = np.array([0.060, 0.440, 0.53, 1.0]) #coord cilindro
+        v1 = np.array([0.060, 0.450, 0.460, 1.0]) #coord cilindro
         #v1 = np.array([0.306, 0.596, 0.3, 1.0]) #([0.106, 0.596, 0.04, 1.0]) # rialzate di 0.04 mm per rappresentare posizione TF 'reale' su rviz
         v2 = np.array([0.155, 0.597, 0.04, 1.0]) # rialzate di 0.04 mm per rappresentare posizione TF 'reale' su rviz
         v3 = np.array([0.206, 0.598, 0.04, 1.0]) # 
