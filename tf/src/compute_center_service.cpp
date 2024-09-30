@@ -63,6 +63,8 @@ private:
     void handle_service(const std::shared_ptr<ComputeCenter::Request> request,
                        const std::shared_ptr<ComputeCenter::Response> response)
     {
+        is_tf_ready = false;
+        
         if (deltas_.size() < 4) {
             RCLCPP_WARN(this->get_logger(), "Non ci sono abbastanza delta disponibili.");
             response->success = false; // Ritorna un errore se non ci sono abbastanza dati
