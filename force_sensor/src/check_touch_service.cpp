@@ -61,19 +61,12 @@ private:
                 action_client_->async_cancel_all_goals();
                 RCLCPP_INFO(this->get_logger(), "Goal cancellato.");
 
-                //                if (goal_handle_) {
-                //                    auto cancel_result = action_client_->async_cancel_goal(goal_handle_);
-                //                    RCLCPP_INFO(this->get_logger(), "Goal cancellato.");
-                //                }
-
                 contact_detected_ = true;
                 break;
             }
 
             std::this_thread::sleep_for(std::chrono::milliseconds(200));
         }
-
-
 
         // Risposta del servizio
         if (contact_detected_) {
